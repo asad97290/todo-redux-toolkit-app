@@ -4,13 +4,14 @@ import {
   addTodo,
   deleteTodo,
   toggleComplete,
-  getTodo,
 } from "../store/todoSlice";
 import "bootstrap/dist/css/bootstrap.css";
 
 export default function Todo() {
+  
   const [newTodo, setNewTodos] = useState([]);
   const [status, setStatus] = useState("all");
+  
   const todos = useSelector((state) => {
     console.log(state.todoReducer.todos);
     return state.todoReducer.todos;

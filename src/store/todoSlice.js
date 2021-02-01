@@ -23,15 +23,9 @@ export const todoSlice = createSlice({
         return todo.isCompleted = true
         }
       })
-    },
-    getTodo:(state,action)=> {
-      state.todos  = state.todos.filter((todo)=>{
-        return todo.isCompleted == action.payload
-      })
-    },
-     
+    }
   }
 })
 
 export const todoReducer = todoSlice.reducer
-export const {addTodo,deleteTodo,toggleComplete,getTodo} = todoSlice.actions;
+export const {addTodo,deleteTodo,toggleComplete} = todoSlice.actions;
